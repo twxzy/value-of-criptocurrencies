@@ -1,0 +1,71 @@
+/*GOOGLE FONTS*/
+
+/* font-family: "Protest Guerrilla", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+/*font-family: "M PLUS Rounded 1c", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Protest+Guerrilla&display=swap');
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #24292D;
+  display: flex;
+  justify-content: center;
+
+}
+
+.container{
+  height: 100vh;
+  width: 75%;
+}
+
+/*HEADER-LOGO*/
+header{
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo{
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  color: whitesmoke;
+}
+
+.description{
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  color: whitesmoke;
+  margin-top: 35px;
+}
+
+/*MAIN*/
+
+main{
+  height: 70%;
+}
+
+.section01{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btc, .eth, .bnb, .sol, .xrp{
+  border: 1px solid black;
+  width: 100%;
+  margin: 0px 30px 0px 30px;
+  height: 100%;
+}
+
+.section02{
+  height: 50%;
+}
