@@ -15,6 +15,21 @@ async function fetchUsdc(){
 
     document.getElementById('usdcPercentage').innerHTML =  parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
 
+    //PERCENTAGE COLOR
+    if(date.priceChangePercent >= 0.00){
+      
+      //GREEN
+      const red = document.getElementById('usdcPercentage')
+      red.style.color = '#10CB81'
+
+    }else{
+
+      //RED
+      const red = document.getElementById('usdcPercentage')
+      red.style.color = '#F6465D'
+
+    }
+
   }catch(error){
 
   }
@@ -55,6 +70,21 @@ async function fetchBitcoin(){
 
     document.getElementById('btcPercentage').innerHTML =  parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
 
+    //PERCENTAGE COLOR
+    if(date.priceChangePercent >= 0.00){
+      
+      //GREEN
+      const red = document.getElementById('btcPercentage')
+      red.style.color = '#10CB81'
+
+    }else{
+
+      //RED
+      const red = document.getElementById('btcPercentage')
+      red.style.color = '#F6465D'
+
+    }
+
   }catch(error){
 
   }
@@ -93,6 +123,20 @@ async function fetchEth(){
 
     document.getElementById('ethPercentage').innerHTML =  parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
 
+    //PERCENTAGE COLOR
+    if(date.priceChangePercent >= 0.00){
+      
+      //GREEN
+      const red = document.getElementById('ethPercentage')
+      red.style.color = '#10CB81'
+
+    }else{
+
+      //RED
+      const red = document.getElementById('ethPercentage')
+      red.style.color = '#F6465D'
+
+    }
   }catch(error){
 
   }
@@ -129,6 +173,21 @@ async function fetchXrp(){
     const date = await response.json()
 
     document.getElementById('xrpPercentage').innerHTML =  parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
+    //PERCENTAGE COLOR
+    if(date.priceChangePercent >= 0.00){
+      
+      //GREEN
+      const red = document.getElementById('xrpPercentage')
+      red.style.color = '#10CB81'
+
+    }else{
+
+      //RED
+      const red = document.getElementById('xrpPercentage')
+      red.style.color = '#F6465D'
+
+    }
 
   }catch(error){
 
