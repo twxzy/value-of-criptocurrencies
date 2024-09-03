@@ -1,12 +1,29 @@
 /*USDC*/
-/*USDC*/
 
-const apiUsdc = "https://api.binance.com/api/v3/ticker/24hr?symbol=USDCUSDT"
+//API USDC
+const apiUsdcPrice = "https://api.binance.com/api/v3/ticker/24hr?symbol=USDCUSDT"
+
 
 async function fetchUsdc(){
 
+  //PERCENTAGE
+
   try{
-    const response = await fetch(apiUsdc)
+
+    const response = await fetch(apiUsdcPrice)
+    const date = await response.json()
+
+    document.getElementById('usdcPercentage').innerHTML =  parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
+  }catch(error){
+
+  }
+
+   //PRICE
+
+  try{
+
+    const response = await fetch(apiUsdcPrice)
     const date = await response.json()
 
     document.getElementById('priceUsdc').innerHTML = '$ ' + parseFloat(date.askPrice).toFixed(2)
@@ -14,20 +31,35 @@ async function fetchUsdc(){
   }catch(error){
 
   }
+
+
 }
 
-setInterval(fetchBitcoin, 1000)
+setInterval(fetchUsdc, 1000)
 
 fetchUsdc()
 
 
-/*BTC*/
-/*BTC*/
+//BTC
 
-
+//API BTC
 const apiBtc = "https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT"
 
 async function fetchBitcoin(){
+  
+  //PERCENTAGE
+
+  try{
+    const response = await fetch(apiBtc)
+    const date = await response.json()
+
+    document.getElementById('btcPercentage').innerHTML =  parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
+  }catch(error){
+
+  }
+
+  //PRICE
 
   try{
     const response = await fetch(apiBtc)
@@ -35,10 +67,10 @@ async function fetchBitcoin(){
 
     document.getElementById('priceBtc').innerHTML = '$ ' + parseFloat(date.askPrice).toFixed(2)
 
-
   }catch(error){
 
   }
+
 }
 
 setInterval(fetchBitcoin, 1000)
@@ -47,19 +79,31 @@ fetchBitcoin()
 
 
 /*ETH*/
-/*ETH*/
 
-
+//API ETH 
 const apiEth = "https://api.binance.com/api/v3/ticker/24hr?symbol=ETHUSDT"
 
 async function fetchEth(){
+
+  //PERCENTAGE
+
+  try{
+    const response = await fetch(apiEth)
+    const date = await response.json()
+
+    document.getElementById('ethPercentage').innerHTML =  parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
+  }catch(error){
+
+  }
+
+  //PRICE
 
   try{
     const response = await fetch(apiEth)
     const date = await response.json()
 
     document.getElementById('priceEth').innerHTML = '$ ' + parseFloat(date.askPrice).toFixed(2)
-
 
   }catch(error){
 
@@ -72,12 +116,25 @@ fetchEth()
 
 
 /*XRP*/
-/*XRP*/
 
-
+//API XRP
 const apiXrp = "https://api.binance.com/api/v3/ticker/24hr?symbol=XRPUSDT"
 
 async function fetchXrp(){
+
+  //PERCENTAGE
+
+  try{
+    const response = await fetch(apiXrp)
+    const date = await response.json()
+
+    document.getElementById('xrpPercentage').innerHTML =  parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
+  }catch(error){
+
+  }  
+
+  //PRICE
 
   try{
     const response = await fetch(apiXrp)
@@ -93,5 +150,4 @@ async function fetchXrp(){
 
 setInterval(fetchXrp, 1000)
 
-fetchXrp()
-
+fetchXrp()  

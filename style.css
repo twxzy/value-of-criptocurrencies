@@ -5,6 +5,11 @@
 
 /*font-family: "M PLUS Rounded 1c", sans-serif;*/
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Protest+Guerrilla&display=swap');
+
+/*font-family: "Libre Baskerville", serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 *{
   box-sizing: border-box;
   padding: 0;
@@ -12,7 +17,7 @@
 }
 
 body{
-  background-color: #24292D;
+  background-color: #181A20;
   display: flex;
   justify-content: center;
 
@@ -25,7 +30,7 @@ body{
 
 /*HEADER-LOGO*/
 header{
-  height: 30%;
+  height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,13 +42,14 @@ header{
   font-weight: 400;
   font-style: normal;
   font-size: 70px;
-  color: whitesmoke;
+  color: #F0B90B;
 }
 
 .description{
   font-family: "M PLUS Rounded 1c", sans-serif;
   color: whitesmoke;
-  margin-top: 35px;
+  margin-top: 20px;
+  font-size: 21px;
 }
 
 /*MAIN*/
@@ -65,20 +71,21 @@ main{
   height: 100%;
   display: flex;
   align-items: center;
-
   flex-direction: column;
+
 }
 
-.porcentagem{
+.percentage{
   color: white;
   margin-top: 15px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 13.5px;
 }
 
 .price{
   color: white;
   transition: 0.9s all ease;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
 }
 
-.section02{
-  height: 50%;
-}
