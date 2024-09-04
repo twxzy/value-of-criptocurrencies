@@ -54,10 +54,6 @@ header{
 
 /*MAIN*/
 
-main{
-
-}
-
 .section01{
   height: 30%;
   display: flex;
@@ -96,14 +92,9 @@ main{
 
 .price{
   color: white;
-  transition: 0.9s all ease;
+  transition: 0.8s color ease-out;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-weight: 300;
   font-size: 16px;
   margin-top: 3px;
 }
-
-.section02{
-
-}
-
