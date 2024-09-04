@@ -55,28 +55,41 @@ header{
 /*MAIN*/
 
 main{
-  height: 70%;
+
 }
 
 .section01{
-  height: 50%;
+  height: 30%;
   display: flex;
   justify-content: center;
-  align-items: center;
   margin-top: 60px;
 }
 
 .btc, .eth, .usdc, .sol, .xrp{
-  width: 20%;
-  height: 100%;
+  width: 9%;
+  height: 170px;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin: 0px 20px 0px 20px;
+  border-radius: 20px;
+}
+
+.iconCrypto{
+  width: 45px;
+}
+
+.criptoName{
+  color: white;
+  margin-top: 15px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 600;
 }
 
 .percentage{
   color: white;
-  margin-top: 15px;
+  margin-top: 12px;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 13.5px;
 }
@@ -84,7 +97,13 @@ main{
 .price{
   color: white;
   transition: 0.9s all ease;
-  font-family: "Libre Baskerville", serif;
-  font-weight: 700;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.section02{
+
 }
 

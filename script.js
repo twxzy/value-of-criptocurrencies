@@ -18,6 +18,8 @@ async function fetchUsdc(){
     //PERCENTAGE COLOR
     if(date.priceChangePercent >= 0.00){
       
+      document.getElementById('usdcPercentage').innerHTML = '+' + parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
       //GREEN
       const red = document.getElementById('usdcPercentage')
       red.style.color = '#10CB81'
@@ -41,7 +43,7 @@ async function fetchUsdc(){
     const response = await fetch(apiUsdcPrice)
     const date = await response.json()
 
-    document.getElementById('priceUsdc').innerHTML = '$ ' + parseFloat(date.askPrice).toFixed(2)
+    document.getElementById('priceUsdc').innerHTML = '$' + parseFloat(date.askPrice).toFixed(2)
 
   }catch(error){
 
@@ -72,6 +74,8 @@ async function fetchBitcoin(){
 
     //PERCENTAGE COLOR
     if(date.priceChangePercent >= 0.00){
+
+      document.getElementById('btcPercentage').innerHTML = '+' + parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
       
       //GREEN
       const red = document.getElementById('btcPercentage')
@@ -95,7 +99,7 @@ async function fetchBitcoin(){
     const response = await fetch(apiBtc)
     const date = await response.json()
 
-    document.getElementById('priceBtc').innerHTML = '$ ' + parseFloat(date.askPrice).toFixed(2)
+    document.getElementById('priceBtc').innerHTML = '$' + parseFloat(date.askPrice).toFixed(2)
 
   }catch(error){
 
@@ -126,6 +130,8 @@ async function fetchEth(){
     //PERCENTAGE COLOR
     if(date.priceChangePercent >= 0.00){
       
+      document.getElementById('ethPercentage').innerHTML = '+' + parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
       //GREEN
       const red = document.getElementById('ethPercentage')
       red.style.color = '#10CB81'
@@ -147,7 +153,7 @@ async function fetchEth(){
     const response = await fetch(apiEth)
     const date = await response.json()
 
-    document.getElementById('priceEth').innerHTML = '$ ' + parseFloat(date.askPrice).toFixed(2)
+    document.getElementById('priceEth').innerHTML = '$' + parseFloat(date.askPrice).toFixed(2)
 
   }catch(error){
 
@@ -157,6 +163,59 @@ async function fetchEth(){
 setInterval(fetchEth, 1000)
 
 fetchEth()
+
+
+/*SOL*/
+
+//API SOL
+const apiSol = "https://api.binance.com/api/v3/ticker/24hr?symbol=SOLUSDT"
+
+async function fetchSol(){
+
+  //PERCENTAGE
+
+  try{
+    const response = await fetch(apiSol)
+    const date = await response.json()
+
+    document.getElementById('solPercentage').innerHTML =  parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
+    //PERCENTAGE COLOR
+    if(date.priceChangePercent >= 0.00){
+      
+      document.getElementById('solPercentage').innerHTML = '+' + parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
+      //GREEN
+      const red = document.getElementById('solPercentage')
+      red.style.color = '#10CB81'
+
+    }else{
+
+      //RED
+      const red = document.getElementById('solPercentage')
+      red.style.color = '#F6465D'
+
+    }
+  }catch(error){
+
+  }
+
+  //PRICE
+
+  try{
+    const response = await fetch(apiSol)
+    const date = await response.json()
+
+    document.getElementById('priceSol').innerHTML = '$' + parseFloat(date.askPrice).toFixed(2)
+
+  }catch(error){
+
+  }
+}
+
+setInterval(fetchSol, 1000)
+
+fetchSol()
 
 
 /*XRP*/
@@ -177,6 +236,8 @@ async function fetchXrp(){
     //PERCENTAGE COLOR
     if(date.priceChangePercent >= 0.00){
       
+      document.getElementById('xrpPercentage').innerHTML = '+' + parseFloat(date.priceChangePercent).toFixed(2) + '% ' + ' (24h)'
+
       //GREEN
       const red = document.getElementById('xrpPercentage')
       red.style.color = '#10CB81'
@@ -200,7 +261,7 @@ async function fetchXrp(){
     const date = await response.json()
 
 
-    document.getElementById('priceXrp').innerHTML = '$ ' + parseFloat(date.askPrice).toFixed(2)
+    document.getElementById('priceXrp').innerHTML = '$' + parseFloat(date.askPrice).toFixed(2)
 
   }catch(error){
 
