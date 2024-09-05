@@ -54,7 +54,7 @@ async function fetchUsdc(){
       if(firstPrice < lastPriceUsdc){
 
         let color = document.getElementById('priceUsdc')
-        color.style.color = '#EA373B'
+        color.style.color = '#F6465D'
       
       //GREEN
       }else if(firstPrice > lastPriceUsdc){
@@ -141,7 +141,7 @@ async function fetchBitcoin(){
       if(firstPrice < lastPriceBtc){
 
         let color = document.getElementById('priceBtc')
-        color.style.color = '#EA373B'
+        color.style.color = '#F6465D'
       
       //GREEN
       }else if(firstPrice > lastPriceBtc){
@@ -226,7 +226,7 @@ async function fetchEth(){
       if(firstPrice < lastPriceEth){
 
         let color = document.getElementById('priceEth')
-        color.style.color = '#EA373B'
+        color.style.color = '#F6465D'
       
       //GREEN
       }else if(firstPrice > lastPriceEth){
@@ -310,7 +310,7 @@ async function fetchSol(){
       if(firstPrice < lastPriceSol){
 
         let color = document.getElementById('priceSol')
-        color.style.color = '#EA373B'
+        color.style.color = '#F6465D'
       
       //GREEN
       }else if(firstPrice > lastPriceSol){
@@ -396,7 +396,7 @@ async function fetchXrp(){
       if(firstPrice < lastPriceXrp){
 
         let color = document.getElementById('priceXrp')
-        color.style.color = '#EA373B'
+        color.style.color = '#F6465D'
       
       //GREEN
       }else if(firstPrice > lastPriceXrp){

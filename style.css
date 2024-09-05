@@ -20,6 +20,7 @@ body{
   background-color: #181A20;
   display: flex;
   justify-content: center;
+  align-items: center;
 
 }
 
@@ -43,6 +44,7 @@ header{
   font-style: normal;
   font-size: 70px;
   color: #F0B90B;
+  border: none;
 }
 
 .description{
@@ -50,6 +52,8 @@ header{
   color: whitesmoke;
   margin-top: 20px;
   font-size: 21px;
+  text-align: center;
+
 }
 
 /*MAIN*/
@@ -63,17 +67,16 @@ header{
 
 .btc, .eth, .usdc, .sol, .xrp{
   width: 9%;
-  height: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0px 20px 0px 20px;
-  border-radius: 20px;
 }
 
 .iconCrypto{
   width: 45px;
+  
 }
 
 .criptoName{
@@ -87,6 +90,7 @@ header{
   color: white;
   margin-top: 12px;
   font-family: "M PLUS Rounded 1c", sans-serif;
+  text-align: center;
   font-size: 13.5px;
 }
 
@@ -97,4 +101,173 @@ header{
   font-weight: 300;
   font-size: 16px;
   margin-top: 3px;
+}
+
+/*BREAKPOINTS*/
+
+/*768px*/
+
+@media only screen and (max-width: 768px) {
+  .container{
+    width: 75%;
+  }
+
+  header{
+    height: 25%;
+
+  }
+
+  .logo{
+    font-size: 60px;
+  }
+
+  .description{
+    font-size: 20px;
+    width: 400px;
+  }
+
+  .section01{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 15px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .btc, .eth, .usdc, .sol, .xrp{
+    height: 185px;
+
+  }
+
+  .iconCrypto{
+    width: 45px;
+  }
+
+  .criptoName{
+    font-size: 15px;
+
+  }
+
+  .percentage{
+    font-size: 13px;
+    margin-top: 4px;
+  }
+
+  .price{
+    font-size: 15px;
+  }
+  
+}
+
+/*480px*/
+
+@media only screen and (max-width: 480px) {
+  .container{
+    width: 90%;
+  }
+
+  header{
+    margin-top: 20px;
+  }
+
+  .logo{
+    font-size: 50px;
+  }
+
+  .description{
+    font-size: 17px;
+    width: 300px;
+  }
+
+  .section01{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px; 
+  }
+
+  .btc, .eth, .usdc, .sol, .xrp{
+    margin: 0;
+    width: 20%;
+    padding: 10px 0px;
+    height: 145px;
+  }
+
+  .iconCrypto{
+    width: 35px;
+  }
+
+  .criptoName{
+    font-size: 11px;
+  }
+
+  .percentage{
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .price{
+    font-size: 14px;
+  }
+
+  
+}
+
+ /*425px*/
+
+@media only screen and (max-width: 425px) {
+  .container{
+    width: 100%;
+  }
+
+  header{
+    margin-top: 20px;
+  }
+
+  .logo{
+    font-size: 50px;
+  }
+
+  .description{
+    font-size: 11px;
+    width: 300px;
+  }
+
+  .section01{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0px 5px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .btc, .eth, .usdc, .sol, .xrp{
+    margin: 0;
+    width: 20%;
+    padding: 10px 0px;
+    height: 145px;
+  }
+
+  .iconCrypto{
+    width: 35px;
+  }
+
+  .criptoName{
+    font-size: 11px;
+  }
+
+  .percentage{
+    font-size: 12px;
+    margin-top: 4px;
+  }
+
+  .price{
+    font-size: 14px;
+  }
+
+  
 }
